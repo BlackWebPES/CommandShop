@@ -7,32 +7,32 @@ api: [3.0.0-ALPHA7, 3.0.0-ALPHA8, 3.0.0-ALPHA9, 3.0.0-ALPHA10, 3.0.0-ALPHA11, 3.
 softdepend: EconomyAPI
 commands: 
   cshop:
-    description: "Create, manage and remove 'buyable' commands"
+    description: ""
     usage: "/cshop <add|remove|setprice|sign|buycmd|addcmd|list|info|help> <args>"
     permission: cshop.command.manage
   buycmd:
-    description: "'Buy' a command"
+    description: ""
     usage: "/buycmd <command>"
     permission: cshop.buy.command
 permissions:
   cshop:
     default: op
-    description: "Main permission for CommandShop"
+    description: ""
     children:
       cshop.command.manage:
         default: op
-        description: "Permission for '/cshop'"
+        description: ""
       cshop.breaksign:
         default: op
-        description: "Permission for breaking CommandShop signs"
+        description: "
       cshop.buy:
         default: op
-        description: "Permission for 'buying' commands via '/buycmd' AND via signs"
+        description: ""
         children:
           cshop.buy.command:
             default: true
-            description: "Permission for 'buying' commands via '/buycmd'"
+            description: ""
           cshop.buy.sign:
             default: true
-            description: "Permission for 'buying' commands via signs"
+            description: ""
 ...
